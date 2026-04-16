@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c3v1cukirufjl" path="res://Assets/FirdtProject/HalfTiles.png" id="3_u44n3"]
 [ext_resource type="PackedScene" uid="uid://bnmjt60l3l417" path="res://platform.tscn" id="4_sb48q"]
 [ext_resource type="Script" uid="uid://b4ohnptae8o1q" path="res://Scripts/animation_player.gd" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Fish.tscn" id="6_r0x5m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u44n3"]
 texture = ExtResource("2_xkndl")
@@ -143,3 +144,24 @@ script = ExtResource("5_t88pq")
 
 [node name="Platform" parent="." unique_id=1117208593 instance=ExtResource("4_sb48q")]
 position = Vector2(77, -13)
+
+[node name="Area2D" parent="." unique_id=823763373 instance=ExtResource("6_r0x5m")]
+position = Vector2(-104, -21)
+
+[node name="Area2D2" parent="." unique_id=845663401 instance=ExtResource("6_r0x5m")]
+position = Vector2(74, 9)
+
+[node name="Area2D3" parent="." unique_id=1494979455 instance=ExtResource("6_r0x5m")]
+position = Vector2(129, 29)
+
+[node name="Area2D4" parent="." unique_id=2084521047 instance=ExtResource("6_r0x5m")]
+position = Vector2(146, -127)
+
+[node name="Area2D5" parent="." unique_id=1183450316 instance=ExtResource("6_r0x5m")]
+position = Vector2(504, -266)
+
+[node name="Area2D6" parent="." unique_id=515076563 instance=ExtResource("6_r0x5m")]
+position = Vector2(259, -57)
+
+[node name="Area2D7" parent="." unique_id=358034134 instance=ExtResource("6_r0x5m")]
+position = Vector2(290, -57)
