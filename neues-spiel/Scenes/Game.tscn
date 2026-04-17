@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dke4gsjjcp40k" path="res://Assets/FirdtProject/Backgroun.png" id="5_bf53h"]
 [ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Scenes/Fish.tscn" id="6_dahhg"]
 [ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="7_fgofq"]
+[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="10_71axn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u44n3"]
 texture = ExtResource("2_fgofq")
@@ -88,7 +89,7 @@ sources/3 = SubResource("TileSetAtlasSource_71axn")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2irst"]
 normal = Vector2(-0.012120322, -0.99992657)
-distance = -140.65633
+distance = -197.87637
 
 [sub_resource type="Animation" id="Animation_sb48q"]
 resource_name = "Move"
@@ -162,6 +163,9 @@ position = Vector2(77, -13)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1468266110]
 position = Vector2(-2, 3)
 shape = SubResource("WorldBoundaryShape2D_2irst")
+
+[node name="Walross" parent="Killzone" unique_id=21398026 instance=ExtResource("10_71axn")]
+position = Vector2(160, 17)
 
 [node name="Fish" type="Node" parent="." unique_id=1305809887]
 

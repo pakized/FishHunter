@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bwlxafxqixypu"]
+
+[ext_resource type="Texture2D" uid="uid://ng802p5wg15e" path="res://Assets/FirdtProject/Walross.png" id="1_0m3e4"]
+[ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="2_1b85l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6e8i"]
+atlas = ExtResource("1_0m3e4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at6h5"]
+atlas = ExtResource("1_0m3e4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tatu"]
+atlas = ExtResource("1_0m3e4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m18ms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6e8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at6h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tatu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t3aqw"]
+radius = 13.038404
+
+[node name="Walross" type="Node2D" unique_id=21398026]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=246705613]
+sprite_frames = SubResource("SpriteFrames_m18ms")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.499204
+
+[node name="Killzone" parent="." unique_id=1217174909 instance=ExtResource("2_1b85l")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=653661365]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_t3aqw")
