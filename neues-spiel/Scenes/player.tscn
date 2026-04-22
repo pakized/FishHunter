@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bu2y8vqd7amuy" path="res://Assets/FirdtProject/SpritePenguin-sheet.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b6i7o8nve4q6n" path="res://Scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://cyflyrb2qkv55" path="res://Assets/FirdtProject/SpritePenguinWalkingLeft-sheet.png" id="3_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://crr2bnvgamdnx" path="res://Assets/FirdtProject/SpritePenguin1.png" id="3_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -15,6 +16,10 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
 atlas = ExtResource("1_4flbx")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("3_vgqql")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("3_6t5aa")
@@ -50,6 +55,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vgqql")
 }, {
 "duration": 1.0,
@@ -81,7 +94,7 @@ script = ExtResource("1_onrkg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=327447095]
 z_index = 5
 sprite_frames = SubResource("SpriteFrames_i3pqv")
-animation = &"walk_right"
+animation = &"idle2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2009113659]
 position = Vector2(0, -1)

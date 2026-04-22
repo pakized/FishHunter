@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	if direction < 0:
 		playerSprite.play("walk_left")
 	if direction == 0:
-		playerSprite.play("idle")
+		playerSprite.play("idle2")
 
 	
 	if direction:

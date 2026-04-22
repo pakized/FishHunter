@@ -269,6 +269,7 @@ scale = Vector2(2, 2)
 
 [node name="SceneTrigger" parent="." unique_id=897783741 instance=ExtResource("13_3cx6b")]
 position = Vector2(1012, -22)
+connected_scene = "level_2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=1521409218]
 position = Vector2(0, -3)

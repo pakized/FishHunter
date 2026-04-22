@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0xd8o2jcmab5" path="res://Scripts/level_2.gd" id="1_ll1bl"]
 
-[node name="Level2" type="Node2D" unique_id=63701310]
+[node name="level_2" type="Node2D" unique_id=63701310]
 script = ExtResource("1_ll1bl")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1382578420]
