@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://4dlon0x5ypbe" path="res://Assets/FirdtProject/Fish.png" id="1_8um3m"]
 [ext_resource type="Script" uid="uid://bajp1a6shau2o" path="res://Scripts/fish.gd" id="1_j2ykt"]
+[ext_resource type="AudioStream" uid="uid://dadnrhhgehufk" path="res://Assets/Music/Collect.wav" id="3_bce5k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2ykt"]
 atlas = ExtResource("1_8um3m")
@@ -42,6 +43,104 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kufgg"]
 height = 20.0
 
+[sub_resource type="Animation" id="Animation_rtied"]
+resource_name = "PickupAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickupSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_bdn1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PickupSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_orbqn"]
+_data = {
+&"PickupAnimation": SubResource("Animation_rtied"),
+&"RESET": SubResource("Animation_bdn1d")
+}
+
 [node name="Fish" type="Area2D" unique_id=823763373]
 collision_mask = 3
 script = ExtResource("1_j2ykt")
@@ -53,5 +152,12 @@ animation = &"rotation"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1414012800]
 position = Vector2(-1, 2)
 shape = SubResource("CapsuleShape2D_kufgg")
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="." unique_id=241907715]
+stream = ExtResource("3_bce5k")
+bus = &"Effect"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1659752216]
+libraries/ = SubResource("AnimationLibrary_orbqn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
