@@ -6,8 +6,7 @@ const JUMP_VELOCITY = -300.0
 @onready var playerSprite = $AnimatedSprite2D
 
 func _ready():
-	playerSprite.play("walk")
-
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -22,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	#input direction can be 1 0 -1
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction > 0:
-		playerSprite.play("walk")
+		playerSprite.play("walk_right")
 	if direction < 0:
 		playerSprite.play("walk_left")
 	if direction == 0:
