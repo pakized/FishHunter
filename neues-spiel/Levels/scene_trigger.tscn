@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dmy8hr4y6am8e" path="res://Scripts/scene_trigger.gd" id="1_ardvg"]
 
 [node name="SceneTrigger" type="Area2D" unique_id=897783741]
+collision_layer = 0
+collision_mask = 8
 script = ExtResource("1_ardvg")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

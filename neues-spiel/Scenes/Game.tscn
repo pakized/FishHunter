@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="12_3so38"]
+[ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Levels/scene_trigger.tscn" id="13_3cx6b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u44n3"]
 texture = ExtResource("2_fgofq")
@@ -134,6 +135,10 @@ _data = {
 &"RESET": SubResource("Animation_t88pq"),
 &"new_animation": SubResource("Animation_r0x5m")
 }
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxwew"]
+radius = 11.0
+height = 22.0
 
 [node name="Game" type="Node2D" unique_id=185562331]
 script = ExtResource("1_dahhg")
@@ -261,3 +266,10 @@ position = Vector2(942, -22)
 [node name="Home" parent="." unique_id=810642366 instance=ExtResource("12_3so38")]
 position = Vector2(1010, -32)
 scale = Vector2(2, 2)
+
+[node name="SceneTrigger" parent="." unique_id=897783741 instance=ExtResource("13_3cx6b")]
+position = Vector2(1012, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=1521409218]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_wxwew")
