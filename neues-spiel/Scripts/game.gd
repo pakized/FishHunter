@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 	if GameManager.score < maxFish: 
 		score_label.text = "you only got " + str(GameManager.score) 
 	else:
-		score_label.text = "Congratulations you got all " + str(GameManager.score) + "Fish"
+		score_label.text = "Congratulations you got all " + str(GameManager.score) + " Fish"
 	pass

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1cnmtnig66lp"]
+
+[ext_resource type="Script" uid="uid://b0xd8o2jcmab5" path="res://Scripts/level_2.gd" id="1_ll1bl"]
+
+[node name="Level2" type="Node2D" unique_id=63701310]
+script = ExtResource("1_ll1bl")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1382578420]
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1483940469]

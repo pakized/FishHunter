@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bk4e1i1g0elkh"]
+
+[ext_resource type="Script" uid="uid://dmy8hr4y6am8e" path="res://Scripts/scene_trigger.gd" id="1_ardvg"]
+
+[node name="SceneTrigger" type="Area2D" unique_id=897783741]
+script = ExtResource("1_ardvg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

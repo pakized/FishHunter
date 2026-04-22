@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bk7wnw4olvkwb"]
+
+[ext_resource type="Texture2D" uid="uid://bmfqdur5f5tva" path="res://Assets/FirdtProject/Iglu.png" id="1_uq2cn"]
+
+[node name="Home" type="Node2D" unique_id=810642366]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1693675498]
+texture = ExtResource("1_uq2cn")

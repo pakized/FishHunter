@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Scenes/Fish.tscn" id="6_dahhg"]
 [ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="10_71axn"]
+[ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="12_3so38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u44n3"]
 texture = ExtResource("2_fgofq")
@@ -256,3 +257,7 @@ theme_override_font_sizes/font_size = 10
 
 [node name="Fish2" parent="." unique_id=1853649751 instance=ExtResource("6_dahhg")]
 position = Vector2(942, -22)
+
+[node name="Home" parent="." unique_id=810642366 instance=ExtResource("12_3so38")]
+position = Vector2(1010, -32)
+scale = Vector2(2, 2)
