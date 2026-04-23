@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0xd8o2jcmab5" path="res://Scripts/level_2.gd" id="1_ll1bl"]
 [ext_resource type="Texture2D" uid="uid://idl4n4nrmp0o" path="res://Assets/FirdtProject/lvl2Sprites/Tiles.png" id="2_kbe2v"]
+[ext_resource type="Script" uid="uid://cwnma1i0da8be" path="res://Scripts/Lvl2/camera_2d.gd" id="3_x7ybq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arsda"]
 texture = ExtResource("2_kbe2v")
@@ -32,3 +33,6 @@ script = ExtResource("1_ll1bl")
 tile_set = SubResource("TileSet_dgq3b")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1483940469]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=344001238]
+script = ExtResource("3_x7ybq")
