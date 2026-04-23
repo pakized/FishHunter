@@ -4,7 +4,9 @@ extends Node2D
 #
 #@export var player_scene: PackedScene
 #
-#func _ready():
+func _ready():
+	if scene_manager.player:
+		add_child(scene_manager)	
 	#var spawn := $PlayerSpawn.global_position
 	#var player := player_scene.instantiate()
 	#get_tree().current_scene.add_child(player)

@@ -1,10 +1,34 @@
 [gd_scene format=3 uid="uid://b1cnmtnig66lp"]
 
 [ext_resource type="Script" uid="uid://b0xd8o2jcmab5" path="res://Scripts/level_2.gd" id="1_ll1bl"]
+[ext_resource type="Texture2D" uid="uid://idl4n4nrmp0o" path="res://Assets/FirdtProject/lvl2Sprites/Tiles.png" id="2_kbe2v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arsda"]
+texture = ExtResource("2_kbe2v")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dgq3b"]
+sources/0 = SubResource("TileSetAtlasSource_arsda")
 
 [node name="level_2" type="Node2D" unique_id=63701310]
 script = ExtResource("1_ll1bl")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1382578420]
+tile_set = SubResource("TileSet_dgq3b")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1483940469]
