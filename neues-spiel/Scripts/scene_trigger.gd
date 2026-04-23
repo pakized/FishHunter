@@ -4,12 +4,13 @@ class_name ScenTrigger extends Area2D
 var scene_folder = "res://Levels/"
 #"C:/Users/pdura/Daten/Programmieren/GodotProjects/Games/Semester1/FishHunter/neues-spiel/Scenes/player.tscn"
 var playerPath = "res://Scenes/player.tscn"
+var scenePath = "res://Scenes/Levels/Level2/level_2.tscn"
 
 #res://Levels/level_2.tscn 
 func _on_body_entered(body: Node2D) -> void:
 	#var fullPath = scene_folder + connected_scene + ".tscn"
 	if body is Player:
-		scene_manager.change_scene(playerPath, body)
+		scene_manager.change_scene(scenePath, body)
 	#var sceneTree = get_tree()
 	#sceneTree.change_scene_to_file(fullPath)
 	#get_tree().change_scene_to_file.bind(fullPath).call_deferred()

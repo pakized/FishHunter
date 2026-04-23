@@ -1,6 +1,6 @@
 
 # game.gd
-extends Node2D
+extends BaseScene
 
 @onready var score_label: Label = $Labels/Label4
 
