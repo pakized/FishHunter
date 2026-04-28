@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d0wcc8wtkllaa" path="res://Assets/FirdtProject/lvl2Sprites/Background.png" id="8_b4cto"]
 [ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="9_ovgfj"]
 [ext_resource type="Script" uid="uid://iwijtnyl6m6x" path="res://Scripts/Enemy/walross.gd" id="10_11kjr"]
+[ext_resource type="Script" uid="uid://dn5b385akwnpi" path="res://Scripts/Enemy/walrossBouncy.gd" id="10_dbf8i"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="10_j1k8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arsda"]
@@ -294,6 +295,7 @@ tile_set = SubResource("TileSet_ovgfj")
 
 [node name="Walross" parent="." unique_id=21398026 instance=ExtResource("9_ovgfj")]
 position = Vector2(996, 84)
+script = ExtResource("10_dbf8i")
 
 [node name="Walross2" parent="." unique_id=1993153714 instance=ExtResource("9_ovgfj")]
 position = Vector2(419, 82)
