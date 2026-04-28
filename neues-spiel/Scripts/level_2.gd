@@ -4,12 +4,11 @@ extends Node2D
 #
 #
 func _ready():
-	if scene_manager.player:
-		add_child(scene_manager)
-	print($Player)
-	PlayerCharakter.set_spawn_position(Vector2(0, 0))
-#	$Player.set_spawn_position(Vector2(0, 0))
-
+	pass
+	#print($Player)
+#	PlayerCharakter.set_spawn_position(Vector2(0, -10))
+	#OS.delay_msec(2000) # Wartet 2 Sekunden (blockierend)
+#$Player.set_spawn_position(Vector2(0, 0))
 
 	
 	#var spawn := $PlayerSpawn.global_position

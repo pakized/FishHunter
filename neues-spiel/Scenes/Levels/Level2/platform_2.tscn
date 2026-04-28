@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5l11185rykui"]
+
+[ext_resource type="Texture2D" uid="uid://chtbxybn73wjx" path="res://Assets/FirdtProject/lvl2Sprites/Plarform2.png" id="1_ob8g6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ob8g6"]
+size = Vector2(32, 8)
+
+[node name="Platform2" type="AnimatableBody2D" unique_id=2052315388]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2000398978]
+texture = ExtResource("1_ob8g6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1115565312]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ob8g6")
+one_way_collision = true
