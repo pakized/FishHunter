@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dc0jst2x2t115" path="res://Assets/FirdtProject/IceTiles.png" id="3_dvpht"]
 [ext_resource type="Texture2D" uid="uid://d0wcc8wtkllaa" path="res://Assets/FirdtProject/lvl2Sprites/Background.png" id="4_53phk"]
 [ext_resource type="Texture2D" uid="uid://clrig3mpea1hg" path="res://Assets/FirdtProject/lvl3/Background.png" id="5_o7uu1"]
+[ext_resource type="Script" uid="uid://dbaf17mr11x8m" path="res://Scripts/menu/play.gd" id="6_67nmr"]
+[ext_resource type="Script" uid="uid://do054cg38syes" path="res://Scripts/menu/quitButton.gd" id="7_dvpht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ks7xf"]
 texture = ExtResource("1_plwri")
@@ -145,6 +147,7 @@ offset_top = 30.0
 offset_right = 333.0
 offset_bottom = 121.0
 text = "Play	"
+script = ExtResource("6_67nmr")
 
 [node name="Highscore" type="Button" parent="." unique_id=361486976]
 layout_mode = 0
@@ -163,7 +166,7 @@ offset_right = 337.0
 offset_bottom = 410.0
 text = "Choose level"
 
-[node name="Button4" type="Button" parent="." unique_id=1873304606]
+[node name="Credits" type="Button" parent="." unique_id=1873304606]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 451.0
@@ -179,3 +182,7 @@ offset_top = 452.0
 offset_right = 1233.0
 offset_bottom = 543.0
 text = "Quit"
+script = ExtResource("7_dvpht")
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

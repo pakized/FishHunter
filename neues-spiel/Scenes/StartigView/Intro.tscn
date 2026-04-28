@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://d0wcc8wtkllaa" path="res://Assets/FirdtProject/lvl2Sprites/Background.png" id="1_8txrx"]
 [ext_resource type="Texture2D" uid="uid://clrig3mpea1hg" path="res://Assets/FirdtProject/lvl3/Background.png" id="2_w3dpi"]
 [ext_resource type="Texture2D" uid="uid://cru2by1n0da6f" path="res://Assets/FirdtProject/lvl3/Background2.png" id="3_4tpbx"]
+[ext_resource type="Script" uid="uid://oxyth7ky37l8" path="res://Scripts/menu/playButton.gd" id="4_w3dpi"]
+[ext_resource type="Script" uid="uid://dnnrtgr0wjqei" path="res://Scripts/menu/go_back.gd" id="5_4tpbx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mu3qj"]
 texture = ExtResource("1_8txrx")
@@ -138,6 +140,7 @@ offset_top = 494.0
 offset_right = 769.0
 offset_bottom = 585.0
 text = "Play"
+script = ExtResource("4_w3dpi")
 
 [node name="GoBack" type="Button" parent="." unique_id=1277141981]
 layout_mode = 0
@@ -146,6 +149,7 @@ offset_top = 494.0
 offset_right = 1267.0
 offset_bottom = 585.0
 text = "Go Back"
+script = ExtResource("5_4tpbx")
 
 [node name="Label" type="Label" parent="." unique_id=1339941299]
 layout_mode = 0
@@ -156,6 +160,7 @@ offset_bottom = 473.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Story
+
 Somewhere deep in the South Pole, there once was a great penguin colony.
 They lived happily, but they had to avoid the walruses that also lived near their home.
 Then one day it happened: the walruses were becoming more numerous and larger, 
@@ -167,3 +172,6 @@ on their own yet. She made a home for them and swore to care and provide for the
 as long as she could, until they could look after themselves.
 Every day, she locks the little ones in their home and goes hunting for fish. 
 But great danger awaits her, since the walruses are still out there…"
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="GoBack" to="GoBack" method="_on_pressed"]

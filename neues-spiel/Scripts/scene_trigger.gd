@@ -7,7 +7,7 @@ var scene_folder = "res://Levels/"
 #res://Levels/level_2.tscn 
 
 #var levelNames: Array[String] = ["Game", "level2", "level_3"]
-var scenePaths: Array[String] = ["Game", "res://Scenes/Levels/Level2/level_2.tscn", "res://Scenes/Levels/Level3/level_3.tscn"]
+var scenePaths: Array[String] = ["res://Scenes/Game.tscn", "res://Scenes/Levels/Level2/level_2.tscn", "res://Scenes/Levels/Level3/level_3.tscn"]
 
 func _on_body_entered(body: Node2D) -> void:
 	#var fullPath = scene_folder + connected_scene + ".tscn"
