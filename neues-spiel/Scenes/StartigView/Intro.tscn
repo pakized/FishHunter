@@ -146,3 +146,24 @@ offset_top = 494.0
 offset_right = 1267.0
 offset_bottom = 585.0
 text = "Go Back"
+
+[node name="Label" type="Label" parent="." unique_id=1339941299]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 14.0
+offset_right = 1062.0
+offset_bottom = 473.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Story
+Somewhere deep in the South Pole, there once was a great penguin colony.
+They lived happily, but they had to avoid the walruses that also lived near their home.
+Then one day it happened: the walruses were becoming more numerous and larger, 
+and there was only one way to still their hunger. When they attacked, the penguins 
+had no chance of survival. Only a few penguins survived, 
+and they began to leave their home in search of a safer place to live. Just one penguin 
+decided to stay, because she found eight little baby penguins who could not escape 
+on their own yet. She made a home for them and swore to care and provide for them 
+as long as she could, until they could look after themselves.
+Every day, she locks the little ones in their home and goes hunting for fish. 
+But great danger awaits her, since the walruses are still out there…"
