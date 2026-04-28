@@ -7,6 +7,8 @@ extends BaseScene
 var maxFish = 8
 
 func _ready():
+	
+	
 	pass
 	
 func _process(delta: float) -> void:

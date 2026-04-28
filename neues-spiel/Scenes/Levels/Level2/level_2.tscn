@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://dn5b385akwnpi" path="res://Scripts/Enemy/walrossBouncy.gd" id="10_dbf8i"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="10_j1k8d"]
 [ext_resource type="Script" uid="uid://dxofglyn844sw" path="res://Scripts/Enemy/walrossBouncyMoving.gd" id="13_b6hw4"]
+[ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Scenes/Levels/scene_trigger.tscn" id="14_q84mq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arsda"]
 texture = ExtResource("2_kbe2v")
@@ -202,6 +203,10 @@ texture = ExtResource("8_b4cto")
 [sub_resource type="TileSet" id="TileSet_ovgfj"]
 sources/0 = SubResource("TileSetAtlasSource_b4cto")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oivyd"]
+radius = 17.0
+height = 34.0
+
 [node name="level_2" type="Node2D" unique_id=63701310]
 script = ExtResource("1_ll1bl")
 
@@ -311,3 +316,11 @@ script = ExtResource("10_11kjr")
 [node name="Walross3" parent="Enemy" unique_id=1190568532 instance=ExtResource("9_ovgfj")]
 position = Vector2(1945, 100)
 script = ExtResource("13_b6hw4")
+
+[node name="SceneTrigger" parent="." unique_id=897783741 instance=ExtResource("14_q84mq")]
+position = Vector2(2048, 95)
+connected_scene = "level_2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=638359991]
+position = Vector2(8, 1)
+shape = SubResource("CapsuleShape2D_oivyd")

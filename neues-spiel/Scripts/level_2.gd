@@ -4,6 +4,9 @@ extends Node2D
 #
 #
 func _ready():
+	
+	print(get_tree().current_scene.name)
+
 	pass
 	#print($Player)
 #	PlayerCharakter.set_spawn_position(Vector2(0, -10))
