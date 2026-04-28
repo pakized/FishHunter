@@ -149,7 +149,7 @@ unique_name_in_owner = true
 [node name="Player" parent="." unique_id=2069080751 instance=ExtResource("1_7lihs")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=465593593]
-zoom = Vector2(4, 4)
+zoom = Vector2(2, 2)
 limit_bottom = 80
 limit_smoothed = true
 

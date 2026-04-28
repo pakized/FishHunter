@@ -25,6 +25,11 @@ GameManager="*uid://bkgb3jgail7aq"
 Musik="*uid://c6cywvoorqdnk"
 scene_manager="*uid://dclvqhmhm1qn2"
 
+[display]
+
+window/size/viewport_width=1300
+window/size/viewport_height=600
+
 [global_group]
 
 Enemy=""

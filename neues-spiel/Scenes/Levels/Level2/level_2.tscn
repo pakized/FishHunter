@@ -228,7 +228,7 @@ shape = SubResource("WorldBoundaryShape2D_maku3")
 position = Vector2(-4, 3)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=344001238]
-position = Vector2(-22, -20)
+position = Vector2(14, -10)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 script = ExtResource("3_x7ybq")
