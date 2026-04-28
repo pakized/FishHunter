@@ -1,10 +1,10 @@
 extends Node2D
 const SPEED = 20
-const JUMP = 75
-#var startPosition: float
-#var direction := 1
-#@onready var rayCastDown = $RayCastDown
+const JUMP = 45
+var direction = 1
 
+@onready var rayCastRight = $RayCastRight
+@onready var rayCastLeft = $RayCastLeft
 
 
 func _ready():
@@ -24,3 +24,12 @@ func _ready():
 		position.y,
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if rayCastRight.is_colliding():
+		direction = -1
+	if rayCastLeft.is_colliding():
+		direction = 1
+	position.x += direction * SPEED * delta
