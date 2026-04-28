@@ -10,7 +10,8 @@ var scenePath = "res://Scenes/Levels/Level2/level_2.tscn"
 func _on_body_entered(body: Node2D) -> void:
 	#var fullPath = scene_folder + connected_scene + ".tscn"
 	if body is Player:
-		scene_manager.change_scene(scenePath, body)
+		if GameManager.score == 8:
+			scene_manager.change_scene(scenePath, body)
 	#var sceneTree = get_tree()
 	#sceneTree.change_scene_to_file(fullPath)
 	#get_tree().change_scene_to_file.bind(fullPath).call_deferred()
