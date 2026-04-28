@@ -44,6 +44,7 @@ autoplay = "idle"
 frame_progress = 0.499204
 
 [node name="Killzone" parent="." unique_id=1217174909 instance=ExtResource("2_1b85l")]
+collision_layer = 129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=653661365]
 position = Vector2(0, -1)

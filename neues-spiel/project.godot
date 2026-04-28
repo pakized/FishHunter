@@ -25,6 +25,10 @@ GameManager="*uid://bkgb3jgail7aq"
 Musik="*uid://c6cywvoorqdnk"
 scene_manager="*uid://dclvqhmhm1qn2"
 
+[global_group]
+
+Enemy=""
+
 [input]
 
 jump={

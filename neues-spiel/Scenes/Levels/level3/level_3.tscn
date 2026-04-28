@@ -102,6 +102,120 @@ sources/0 = SubResource("TileSetAtlasSource_i1t13")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ewg53"]
 distance = -103.0
 
+[sub_resource type="Animation" id="Animation_otjro"]
+resource_name = "HorizontalMovement"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.7333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1780, 288), Vector2(1556, 288)]
+}
+
+[sub_resource type="Animation" id="Animation_ph5ud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1780, 288)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e8jce"]
+_data = {
+&"HorizontalMovement": SubResource("Animation_otjro"),
+&"RESET": SubResource("Animation_ph5ud")
+}
+
+[sub_resource type="Animation" id="Animation_t4r4r"]
+resource_name = "HorizontalMovement"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1387, 134), Vector2(1604, 134)]
+}
+
+[sub_resource type="Animation" id="Animation_3hvqj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1387, 134)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_snqcp"]
+_data = {
+&"HorizontalMovement": SubResource("Animation_t4r4r"),
+&"RESET": SubResource("Animation_3hvqj")
+}
+
+[sub_resource type="Animation" id="Animation_eyjc1"]
+resource_name = "MoveVertical"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.26666668, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1503, 280), Vector2(1503, 155)]
+}
+
+[sub_resource type="Animation" id="Animation_tan1m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1503, 280)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7hbyk"]
+_data = {
+&"MoveVertical": SubResource("Animation_eyjc1"),
+&"RESET": SubResource("Animation_tan1m")
+}
+
 [node name="Level3" type="Node2D" unique_id=1757382461]
 script = ExtResource("1_qaq1b")
 
@@ -191,15 +305,27 @@ position = Vector2(74, -5)
 [node name="Platform4" parent="Platforms" unique_id=385096122 instance=ExtResource("9_i1t13")]
 position = Vector2(1780, 288)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4" unique_id=592102943]
+libraries/ = SubResource("AnimationLibrary_e8jce")
+autoplay = &"HorizontalMovement"
+
 [node name="Platform5" parent="Platforms" unique_id=1741568772 instance=ExtResource("9_i1t13")]
 position = Vector2(1387, 134)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform5" unique_id=321678364]
+libraries/ = SubResource("AnimationLibrary_snqcp")
+autoplay = &"HorizontalMovement"
+
 [node name="Platform6" parent="Platforms" unique_id=1419388597 instance=ExtResource("9_i1t13")]
-position = Vector2(1505, 283)
+position = Vector2(1503, 280)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform6" unique_id=36261747]
+libraries/ = SubResource("AnimationLibrary_7hbyk")
+autoplay = &"MoveVertical"
 
 [node name="Labels" type="Node" parent="." unique_id=1896374244]
 
-[node name="Label" type="Label" parent="Labels" unique_id=307385407]
+[node name="Label" type="Label" parent="Labels" unique_id=307385407 groups=["Enemy"]]
 offset_left = 104.0
 offset_top = -19.0
 offset_right = 226.0

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1jsulde56tqs" path="res://Scripts/killzone.gd" id="1_jvagm"]
 
-[node name="Killzone" type="Area2D" unique_id=1217174909]
+[node name="Killzone" type="Area2D" unique_id=1217174909 groups=["Enemy"]]
 collision_mask = 2
 script = ExtResource("1_jvagm")
 
