@@ -10,10 +10,11 @@ This project is based on the following tutorial and extends it with additional g
 
 The game was developed as part of a **game programming lecture project**.
 
+
 <p align="center">
-  <img width="1147" height="648" alt="Story"
-       src="Assets/FirdtProject/Intro.png" />
+  <img src="Assets/FirdtProject/Intro.png" alt="Story Intro" />
 </p>
+
 
 ## Gameplay
 
