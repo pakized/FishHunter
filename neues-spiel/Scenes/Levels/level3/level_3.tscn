@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://c66ec4i4ncmph" path="res://Scenes/Levels/level3/walrossmovingHorizontal.gd" id="12_l2mfs"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="13_02qms"]
 [ext_resource type="Script" uid="uid://ntkgmwx27ssc" path="res://Scenes/Levels/level3/walrossmovingVertical.gd" id="13_otjro"]
+[ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Scenes/Levels/scene_trigger.tscn" id="15_ph5ud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3nqj"]
 texture = ExtResource("3_d3q4f")
@@ -113,7 +114,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.7333333),
+"times": PackedFloat32Array(0.3, 2.7333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1780, 288), Vector2(1556, 288)]
@@ -142,7 +143,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_t4r4r"]
 resource_name = "HorizontalMovement"
-length = 2.0
+length = 3.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -151,7 +152,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.97),
+"times": PackedFloat32Array(0.23333333, 2.7666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1387, 134), Vector2(1604, 134)]
@@ -189,7 +190,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.26666668, 1.4),
+"times": PackedFloat32Array(0.26666668, 1.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1503, 280), Vector2(1503, 155)]
@@ -215,6 +216,10 @@ _data = {
 &"MoveVertical": SubResource("Animation_eyjc1"),
 &"RESET": SubResource("Animation_tan1m")
 }
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8jce"]
+radius = 17.0
+height = 34.0
 
 [node name="Level3" type="Node2D" unique_id=1757382461]
 script = ExtResource("1_qaq1b")
@@ -346,3 +351,10 @@ hide something"
 
 [node name="Area2D2" parent="." unique_id=2013416116 instance=ExtResource("6_qxnb4")]
 position = Vector2(438, 205)
+
+[node name="SceneTrigger" parent="." unique_id=897783741 instance=ExtResource("15_ph5ud")]
+position = Vector2(1809, 99)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=1865293961]
+position = Vector2(2, 1)
+shape = SubResource("CapsuleShape2D_e8jce")
