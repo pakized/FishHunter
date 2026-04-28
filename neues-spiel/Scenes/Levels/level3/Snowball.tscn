@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://o7tlfrhp2233"]
+
+[ext_resource type="Script" uid="uid://c7v4j5du43nd2" path="res://Scripts/lvl3/snowball.gd" id="1_7nvdd"]
+[ext_resource type="Texture2D" uid="uid://bql3pwanqbht1" path="res://Assets/FirdtProject/lvl3/SnowBall.png" id="1_hwgnh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7nvdd"]
+radius = 13.0
+
+[node name="Area2D" type="Area2D" unique_id=100927847]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("1_7nvdd")
+
+[node name="SnowBall" type="Sprite2D" parent="." unique_id=41882306]
+position = Vector2(0, -3)
+texture = ExtResource("1_hwgnh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1294330432]
+position = Vector2(1, -2)
+shape = SubResource("CircleShape2D_7nvdd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=600482914]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
