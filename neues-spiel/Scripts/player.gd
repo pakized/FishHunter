@@ -5,6 +5,11 @@ const JUMP_VELOCITY = -300.0
 
 @onready var playerSprite = $AnimatedSprite2D
 
+@export var snowball_scene: PackedScene
+
+
+
+
 func _ready():
 	print("ready")
 	#global_position = marker2DPosition
@@ -38,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		playerSprite.play("walk_left")
 	if direction == 0:
 		playerSprite.play("idle2")
-
+	
 	
 	if direction:
 		velocity.x = direction * SPEED
@@ -46,3 +51,25 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+
+func _unhandled_input(event):
+	if event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_LEFT \
+	and event.pressed:
+		throw_snowball()
+	
+func throw_snowball():
+	if GameManager.ammunition <= 0:
+		print("no amo")
+		return
+		
+	var snowball = snowball_scene.instantiate()
+	get_parent().add_child(snowball)
+	snowball.global_position = global_position + Vector2(0,0)
+		
+	var mouse_pos = get_global_mouse_position()
+	var direction = (mouse_pos - snowball.global_position).normalized()
+	snowball.velocity = direction * 150
+	GameManager.ammunition -=1
+	print("success")
