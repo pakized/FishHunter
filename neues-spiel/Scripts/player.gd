@@ -4,9 +4,16 @@ const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
 @onready var playerSprite = $AnimatedSprite2D
+var marker2DPosition = Vector2(10,20)
 
 func _ready():
+	print("ready")
+	#global_position = marker2DPosition
 	pass
+
+func set_spawn_position(pos: Vector2):
+	velocity = Vector2.ZERO
+	global_position = pos
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

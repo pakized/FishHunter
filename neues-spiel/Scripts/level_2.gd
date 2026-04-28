@@ -2,16 +2,23 @@ extends Node2D
 #
 #
 #
-#@export var player_scene: PackedScene
 #
 func _ready():
 	if scene_manager.player:
-		add_child(scene_manager)	
+		add_child(scene_manager)
+	print($Player)
+	PlayerCharakter.set_spawn_position(Vector2(0, 0))
+#	$Player.set_spawn_position(Vector2(0, 0))
+
+
+	
 	#var spawn := $PlayerSpawn.global_position
 	#var player := player_scene.instantiate()
 	#get_tree().current_scene.add_child(player)
 	#player.global_position = spawn
 #
+
+
 #
 #
 #
