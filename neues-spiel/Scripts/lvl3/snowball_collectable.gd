@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("body entered")
+	print("snowballCollectible")
 	GameManager.add_ammunition()
 	queue_free()
-	pass # Replace with function body.	pass # Replace with function body.
