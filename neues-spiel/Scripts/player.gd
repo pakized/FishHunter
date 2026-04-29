@@ -5,7 +5,7 @@ const JUMP_VELOCITY = -300.0
 
 @onready var playerSprite = $AnimatedSprite2D
 
-@export var snowball_scene: PackedScene
+@export var snowball_scene = load("res://Scenes/Weapons/Snowball.tscn")
 
 
 

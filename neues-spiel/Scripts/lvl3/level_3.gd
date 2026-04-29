@@ -3,8 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	print(get_tree().current_scene.name)
+	GameManager.score = 0
+
+	#print(get_tree().current_scene.name)
 
 	pass # Replace with function body.
 

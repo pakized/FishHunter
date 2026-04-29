@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://d31h4qqyc7lr0"]
 
 [ext_resource type="Texture2D" uid="uid://y5fhbfb40ve8" path="res://Assets/FirdtProject/lvl4/Background.png" id="1_ocku3"]
+[ext_resource type="Script" uid="uid://cp574rvb2esdr" path="res://Scripts/level4/level_4.gd" id="1_uuukx"]
 [ext_resource type="Texture2D" uid="uid://bkphv112dl33v" path="res://Assets/FirdtProject/lvl4/Background2.png" id="2_3mvam"]
 [ext_resource type="PackedScene" uid="uid://boncxbjhfylr8" path="res://Scenes/player.tscn" id="2_pun3u"]
 [ext_resource type="Texture2D" uid="uid://wil4xdtljrto" path="res://Assets/FirdtProject/lvl4/Tiles.png" id="3_7kw70"]
 [ext_resource type="PackedScene" uid="uid://cjsu5gahc748" path="res://Scenes/Levels/level4/platform.tscn" id="4_mmgyo"]
 [ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Scenes/Fish.tscn" id="5_6meei"]
-[ext_resource type="PackedScene" uid="uid://dg5dylob8pl7f" path="res://Scenes/Levels/level3/SnowballCollectable.tscn" id="7_hwi50"]
+[ext_resource type="PackedScene" uid="uid://dg5dylob8pl7f" path="res://Scenes/Weapons/SnowballCollectable.tscn" id="7_hwi50"]
 [ext_resource type="Script" uid="uid://b10u0ilbnc7u7" path="res://Scenes/Levels/level4/DetectingAndMovingPlatform.gd" id="8_dgus7"]
 [ext_resource type="Script" uid="uid://im4f4wkiar2b" path="res://Scenes/Levels/level4/PlatformDetector.gd" id="9_81a5i"]
 [ext_resource type="PackedScene" uid="uid://dj4471h4e7k7l" path="res://Scenes/Weapons/ice_cube_collectible.tscn" id="10_81a5i"]
@@ -137,6 +138,7 @@ _data = {
 size = Vector2(34, 13)
 
 [node name="level_4" type="Node2D" unique_id=1710502292]
+script = ExtResource("1_uuukx")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=296493714]
 
