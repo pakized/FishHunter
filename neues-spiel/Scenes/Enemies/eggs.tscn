@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dsto14veqx7sr"]
+
+[ext_resource type="Script" uid="uid://trgxuy7hevhl" path="res://Scripts/Enemy/eggs.gd" id="1_jnbkc"]
+[ext_resource type="Texture2D" uid="uid://bpssahcre4cta" path="res://Assets/FirdtProject/lvl4/Egg.png" id="1_tspsr"]
+[ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="3_knqk1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jnbkc"]
+radius = 9.0
+height = 26.0
+
+[node name="Area2D" type="Area2D" unique_id=425788626 groups=["Enemy"]]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_jnbkc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2143238397]
+texture = ExtResource("1_tspsr")
+
+[node name="Killzone" parent="." unique_id=1217174909 instance=ExtResource("3_knqk1")]
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1475270111]
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("CapsuleShape2D_jnbkc")

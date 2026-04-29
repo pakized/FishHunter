@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bs3ltshikmob3"]
+
+[ext_resource type="Texture2D" uid="uid://crtm1rwemhp73" path="res://Assets/FirdtProject/lvl4/Seagull.png" id="1_j61uf"]
+[ext_resource type="Script" uid="uid://c1hm4bjor7gha" path="res://Scripts/Enemy/seagull.gd" id="1_lmxtt"]
+[ext_resource type="PackedScene" uid="uid://dsto14veqx7sr" path="res://Scenes/Enemies/eggs.tscn" id="2_3srl2"]
+[ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="2_lmxtt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3srl2"]
+size = Vector2(26.75, 10.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t13j0"]
+size = Vector2(27, 10)
+
+[node name="SeaGull" type="Node2D" unique_id=1945042883 groups=["Enemy"]]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=721409235]
+script = ExtResource("1_lmxtt")
+egg_scene = ExtResource("2_3srl2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1970094236]
+texture = ExtResource("1_j61uf")
+
+[node name="RayCastLeft" type="RayCast2D" parent="CharacterBody2D" unique_id=1909259020]
+target_position = Vector2(-25, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="CharacterBody2D" unique_id=1649304304]
+target_position = Vector2(28, 0)
+
+[node name="Killzone" parent="CharacterBody2D" unique_id=1217174909 instance=ExtResource("2_lmxtt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Killzone" unique_id=1325453818]
+position = Vector2(1.625, -0.875)
+shape = SubResource("RectangleShape2D_3srl2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1097645246]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_t13j0")
