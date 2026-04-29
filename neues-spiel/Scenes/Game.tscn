@@ -238,12 +238,12 @@ text = "move with arrow keys or a, d
 jump with space"
 
 [node name="Label2" type="Label" parent="Labels" unique_id=573459628]
-offset_left = 99.0
-offset_top = -20.0
-offset_right = 239.0
-offset_bottom = 5.0
+offset_left = 129.0
+offset_top = -31.0
+offset_right = 269.0
 theme_override_font_sizes/font_size = 10
-text = "be careful around the walrus"
+text = "be careful around the 
+leopard seal"
 
 [node name="Label3" type="Label" parent="Labels" unique_id=1650525898]
 offset_left = 255.0
