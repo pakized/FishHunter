@@ -175,6 +175,18 @@ position = Vector2(148, 230)
 [node name="Platform11" parent="Platforms" unique_id=162337210 instance=ExtResource("7_7xg8u")]
 position = Vector2(149, 196)
 
+[node name="Platform12" parent="Platforms" unique_id=9718042 instance=ExtResource("7_7xg8u")]
+position = Vector2(827, 491)
+
+[node name="Platform13" parent="Platforms" unique_id=511643451 instance=ExtResource("7_7xg8u")]
+position = Vector2(886, 461)
+
+[node name="Platform14" parent="Platforms" unique_id=2016466123 instance=ExtResource("7_7xg8u")]
+position = Vector2(930, 434)
+
+[node name="Platform15" parent="Platforms" unique_id=1694714073 instance=ExtResource("7_7xg8u")]
+position = Vector2(982, 400)
+
 [node name="ICeCubeCollectible" parent="." unique_id=1895342070 instance=ExtResource("9_qqet4")]
 position = Vector2(147, 174)
 
@@ -187,13 +199,13 @@ position = Vector2(386, 113)
 position = Vector2(423, 115)
 
 [node name="Snowball2" parent="Snowballs" unique_id=233568454 instance=ExtResource("8_wgsu3")]
-position = Vector2(1052, 411)
+position = Vector2(895, 77)
 
 [node name="Snowball3" parent="Snowballs" unique_id=415778888 instance=ExtResource("8_wgsu3")]
-position = Vector2(1100, 410)
+position = Vector2(1037, 412)
 
 [node name="Snowball4" parent="Snowballs" unique_id=1264031917 instance=ExtResource("8_wgsu3")]
-position = Vector2(1072, 377)
+position = Vector2(753, 109)
 
 [node name="Snowball6" parent="Snowballs" unique_id=245785939 instance=ExtResource("8_wgsu3")]
 position = Vector2(993, 506)
