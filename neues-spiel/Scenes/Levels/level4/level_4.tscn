@@ -339,9 +339,7 @@ offset_right = -223.0
 offset_bottom = 195.0
 theme_override_font_sizes/font_size = 9
 text = "you can use ice with right mouse click
-use it to freeze this world for a few sconds 
-but that also means you wont be 
-able to collect stuff or hit enemeies"
+use it to freeze flying enemies "
 
 [node name="BouncingSeal2" parent="." unique_id=1884783910 instance=ExtResource("12_gbykg")]
 position = Vector2(1376, -53)
@@ -362,6 +360,15 @@ shape = SubResource("CircleShape2D_yllf7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1609692801]
 position = Vector2(454, 108)
 shape = SubResource("WorldBoundaryShape2D_3058r")
+
+[node name="Label2" type="Label" parent="." unique_id=1273239671]
+offset_left = 758.0
+offset_top = 363.0
+offset_right = 1232.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 10
+text = "your home is down here jump 
+down if you have all your fishes"
 
 [connection signal="body_entered" from="Platforms/Platform3/Detector" to="Platforms/Platform3/Detector" method="_on_body_entered"]
 [connection signal="body_exited" from="Platforms/Platform3/Detector" to="Platforms/Platform3/Detector" method="_on_body_exited"]

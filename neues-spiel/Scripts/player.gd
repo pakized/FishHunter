@@ -92,10 +92,12 @@ func use_iceCubes():
 	#	var mouse_pos = get_global_mouse_position()
 	#	var direction = (mouse_pos - iceCubes.global_position).normalized()
 	#	iceCubes.velocity = direction * 150
-		get_tree().paused = true
+		#get_tree().paused = true
 		GameManager.hasIce = false
+		GameManager.freeze_for(5.0)
 		print("success")
-		await get_tree().create_timer(3.0, true).timeout
+		#GameManager.isFrozen = false
+		#await get_tree().create_timer(3.0, true).timeout
 		get_tree().paused = false
 	else:
 		print("no ice")
