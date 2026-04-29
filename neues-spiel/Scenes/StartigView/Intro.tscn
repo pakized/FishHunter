@@ -135,19 +135,19 @@ layer_0/tile_data = PackedInt32Array(1572902, 65536, 0, 1638438, 65536, 0, 17039
 
 [node name="Play" type="Button" parent="." unique_id=229491939]
 layout_mode = 0
-offset_left = 471.0
-offset_top = 494.0
-offset_right = 769.0
-offset_bottom = 585.0
+offset_left = 637.0
+offset_top = 577.0
+offset_right = 935.0
+offset_bottom = 668.0
 text = "Play"
 script = ExtResource("4_w3dpi")
 
 [node name="GoBack" type="Button" parent="." unique_id=1277141981]
 layout_mode = 0
-offset_left = 969.0
-offset_top = 494.0
-offset_right = 1267.0
-offset_bottom = 585.0
+offset_left = 976.0
+offset_top = 578.0
+offset_right = 1274.0
+offset_bottom = 669.0
 text = "Go Back"
 script = ExtResource("5_4tpbx")
 
