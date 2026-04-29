@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@export var speed := 100
+@export var speed := 70
 @export var egg_scene: PackedScene
 @export var throw_interval := 1.0   # Sekunden
 @onready var sprite = $Sprite2D

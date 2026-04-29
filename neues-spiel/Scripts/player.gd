@@ -13,6 +13,7 @@ var iceCube_scene = load("res://Scenes/Weapons/ice_cube.tscn")
 
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	#print("ready")
 	#global_position = marker2DPosition
 	pass
@@ -84,15 +85,18 @@ func throw_snowball():
 func use_iceCubes():
 	if GameManager.hasIce:
 		print("IceCube visible:", visible)
-		var iceCubes = iceCube_scene.instantiate()
-		get_parent().add_child(iceCubes)
-		iceCubes.global_position = global_position + Vector2(0,-50)
+		#var iceCubes = iceCube_scene.instantiate()
+		#get_parent().add_child(iceCubes)
+		#iceCubes.global_position = global_position + Vector2(0,-50)
 		
-		var mouse_pos = get_global_mouse_position()
-		var direction = (mouse_pos - iceCubes.global_position).normalized()
-		iceCubes.velocity = direction * 150
+	#	var mouse_pos = get_global_mouse_position()
+	#	var direction = (mouse_pos - iceCubes.global_position).normalized()
+	#	iceCubes.velocity = direction * 150
+		get_tree().paused = true
 		GameManager.hasIce = false
 		print("success")
+		await get_tree().create_timer(3.0, true).timeout
+		get_tree().paused = false
 	else:
 		print("no ice")
 		

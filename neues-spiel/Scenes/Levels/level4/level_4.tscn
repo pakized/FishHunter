@@ -199,7 +199,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_uuukx")
 
 [node name="ICeCubeCollectible" parent="Platforms" unique_id=1895342070 instance=ExtResource("10_81a5i")]
-position = Vector2(529, 112)
+position = Vector2(78, 131)
 
 [node name="BouncingSeal" parent="." unique_id=119448049 instance=ExtResource("12_gbykg")]
 position = Vector2(-73, 131)

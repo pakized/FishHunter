@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://q1807hvgjh1x" path="res://Scripts/Enemy/bouncing_seal.gd" id="1_ilhaj"]
 [ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="2_4uiqi"]
 
-[node name="BouncingSeal" type="Node2D" unique_id=119448049]
+[node name="BouncingSeal" type="Node2D" unique_id=119448049 groups=["Enemy"]]
 script = ExtResource("1_ilhaj")
 
 [node name="Walross" parent="." unique_id=21398026 instance=ExtResource("2_4uiqi")]

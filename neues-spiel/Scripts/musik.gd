@@ -4,6 +4,7 @@ extends AudioStreamPlayer2D
 const LOOP_DURATION := 5.5
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_loop()
 
 func _loop() -> void:
