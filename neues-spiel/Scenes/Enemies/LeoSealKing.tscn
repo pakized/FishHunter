@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://co6h6qbj3oq0i"]
+
+[ext_resource type="Texture2D" uid="uid://ng802p5wg15e" path="res://Assets/FirdtProject/Walross.png" id="1_oeufr"]
+[ext_resource type="Script" uid="uid://bvjoo2e6gqaif" path="res://Scripts/Boss/leo_seal_king.gd" id="1_p02x8"]
+[ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="2_p02x8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhdjq"]
+atlas = ExtResource("1_oeufr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4m7c"]
+atlas = ExtResource("1_oeufr")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv7rb"]
+atlas = ExtResource("1_oeufr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01lj1"]
+atlas = ExtResource("1_oeufr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nko1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhdjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4m7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv7rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01lj1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g5w4x"]
+radius = 40.012497
+
+[node name="LeoSealKing" type="Node2D" unique_id=1871251231]
+script = ExtResource("1_p02x8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1778353416]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_nko1y")
+autoplay = "default"
+frame = 1
+frame_progress = 0.5507115
+
+[node name="Killzone" parent="." unique_id=1217174909 instance=ExtResource("2_p02x8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=422612043]
+position = Vector2(-1, -5)
+shape = SubResource("CircleShape2D_g5w4x")
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=703361273]
+target_position = Vector2(-80, 0)
+collision_mask = 3
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1002021717]
+target_position = Vector2(82, 0)

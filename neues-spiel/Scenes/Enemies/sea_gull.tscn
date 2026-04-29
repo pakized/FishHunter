@@ -14,6 +14,7 @@ size = Vector2(27, 10)
 [node name="SeaGull" type="Node2D" unique_id=1945042883 groups=["Enemy"]]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=721409235]
+collision_mask = 2
 script = ExtResource("1_lmxtt")
 egg_scene = ExtResource("2_3srl2")
 
@@ -27,6 +28,7 @@ target_position = Vector2(-25, 0)
 target_position = Vector2(28, 0)
 
 [node name="Killzone" parent="CharacterBody2D" unique_id=1217174909 instance=ExtResource("2_lmxtt")]
+collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Killzone" unique_id=1325453818]
 position = Vector2(1.625, -0.875)

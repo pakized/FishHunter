@@ -10,7 +10,7 @@ var direction = 1
 func _ready():
 	var duration := JUMP / SPEED
 	var tween = create_tween()
-	tween.set_loops()
+	tween.set_loops()		#eventuell endlos schleife TODO: Infinite Loop error propably here
 	tween.tween_property(
 		self,
 		"position:y",
