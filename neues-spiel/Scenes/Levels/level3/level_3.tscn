@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Scenes/Fish.tscn" id="8_v2wjh"]
 [ext_resource type="PackedScene" uid="uid://815wp6q8f3uq" path="res://Scenes/Levels/level3/platform_3.tscn" id="9_i1t13"]
 [ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="10_p10nx"]
-[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="11_ewg53"]
+[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="11_ewg53"]
 [ext_resource type="Script" uid="uid://c66ec4i4ncmph" path="res://Scenes/Levels/level3/walrossmovingHorizontal.gd" id="12_l2mfs"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="13_02qms"]
 [ext_resource type="Script" uid="uid://ntkgmwx27ssc" path="res://Scenes/Levels/level3/walrossmovingVertical.gd" id="13_otjro"]

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c03mv1r4b4s7y"]
+
+[ext_resource type="Script" uid="uid://cyje7omcr60l4" path="res://Scripts/Enemy/horizontal_moving_seal.gd" id="1_mtlue"]
+[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="2_os8lc"]
+
+[node name="HorizontalMovingSeal" type="Node2D" unique_id=173440745]
+script = ExtResource("1_mtlue")
+
+[node name="Walross" parent="." unique_id=21398026 instance=ExtResource("2_os8lc")]

@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b10u0ilbnc7u7" path="res://Scenes/Levels/level4/DetectingAndMovingPlatform.gd" id="8_dgus7"]
 [ext_resource type="Script" uid="uid://im4f4wkiar2b" path="res://Scenes/Levels/level4/PlatformDetector.gd" id="9_81a5i"]
 [ext_resource type="PackedScene" uid="uid://dj4471h4e7k7l" path="res://Scenes/Weapons/ice_cube_collectible.tscn" id="10_81a5i"]
+[ext_resource type="PackedScene" uid="uid://c74cytn5f4klx" path="res://Scenes/Enemies/bouncing_seal.tscn" id="12_gbykg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pun3u"]
 texture = ExtResource("1_ocku3")
@@ -198,6 +199,9 @@ shape = SubResource("RectangleShape2D_uuukx")
 
 [node name="ICeCubeCollectible" parent="Platforms" unique_id=1895342070 instance=ExtResource("10_81a5i")]
 position = Vector2(529, 112)
+
+[node name="BouncingSeal" parent="." unique_id=119448049 instance=ExtResource("12_gbykg")]
+position = Vector2(-73, 131)
 
 [connection signal="body_entered" from="Platforms/Platform3/Detector" to="Platforms/Platform3/Detector" method="_on_body_entered"]
 [connection signal="body_exited" from="Platforms/Platform3/Detector" to="Platforms/Platform3/Detector" method="_on_body_exited"]

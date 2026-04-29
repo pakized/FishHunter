@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dke4gsjjcp40k" path="res://Assets/FirdtProject/Backgroun.png" id="5_bf53h"]
 [ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Scenes/Fish.tscn" id="6_dahhg"]
 [ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="7_fgofq"]
-[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="10_71axn"]
+[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="12_3so38"]
 [ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Scenes/Levels/scene_trigger.tscn" id="13_3cx6b"]
 

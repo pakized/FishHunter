@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c0byx0va05j3s" path="res://Scenes/killzone.tscn" id="6_npsaq"]
 [ext_resource type="PackedScene" uid="uid://boncxbjhfylr8" path="res://Scenes/player.tscn" id="7_maku3"]
 [ext_resource type="Texture2D" uid="uid://d0wcc8wtkllaa" path="res://Assets/FirdtProject/lvl2Sprites/Background.png" id="8_b4cto"]
-[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/walross.tscn" id="9_ovgfj"]
+[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="9_ovgfj"]
 [ext_resource type="Script" uid="uid://iwijtnyl6m6x" path="res://Scripts/Enemy/walross.gd" id="10_11kjr"]
 [ext_resource type="Script" uid="uid://dn5b385akwnpi" path="res://Scripts/Enemy/walrossBouncy.gd" id="10_dbf8i"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="10_j1k8d"]

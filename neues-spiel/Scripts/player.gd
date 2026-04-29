@@ -5,19 +5,21 @@ const JUMP_VELOCITY = -300.0
 
 @onready var playerSprite = $AnimatedSprite2D
 
-@export var snowball_scene = load("res://Scenes/Weapons/Snowball.tscn")
+var snowball_scene = load("res://Scenes/Weapons/Snowball.tscn")
+
+var iceCube_scene = load("res://Scenes/Weapons/ice_cube.tscn")
 
 
 
 
 func _ready():
-	print("ready")
+	#print("ready")
 	#global_position = marker2DPosition
 	pass
 
-func set_spawn_position(pos: Vector2):
-	velocity = Vector2.ZERO
-	global_position = pos
+#func set_spawn_position(pos: Vector2):
+	#velocity = Vector2.ZERO
+	#global_position = pos
 
 #func die():
 	#queue_free()
@@ -54,10 +56,14 @@ func _physics_process(delta: float) -> void:
 	
 
 func _unhandled_input(event):
-	if event is InputEventMouseButton \
-	and event.button_index == MOUSE_BUTTON_LEFT \
-	and event.pressed:
-		throw_snowball()
+	if event is InputEventMouseButton: 
+		if event.button_index == MOUSE_BUTTON_LEFT \
+		and event.pressed:
+			throw_snowball()
+		if event.button_index == MOUSE_BUTTON_MASK_RIGHT\
+		and event.pressed:
+			use_iceCubes()
+	
 	
 func throw_snowball():
 	if GameManager.ammunition <= 0:
@@ -73,3 +79,21 @@ func throw_snowball():
 	snowball.velocity = direction * 150
 	GameManager.ammunition -=1
 	print("success")
+
+
+func use_iceCubes():
+	if GameManager.hasIce:
+		print("IceCube visible:", visible)
+		var iceCubes = iceCube_scene.instantiate()
+		get_parent().add_child(iceCubes)
+		iceCubes.global_position = global_position + Vector2(0,-50)
+		
+		var mouse_pos = get_global_mouse_position()
+		var direction = (mouse_pos - iceCubes.global_position).normalized()
+		iceCubes.velocity = direction * 150
+		GameManager.hasIce = false
+		print("success")
+	else:
+		print("no ice")
+		
+#euhf
