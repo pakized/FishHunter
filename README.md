@@ -21,7 +21,7 @@ The game was developed as part of a **game programming lecture project**.
 ## Gameplay
 
 <p align="center">
-  <img width="1147" height="648" alt="Gameplay" src="https://github.com/user-attachments/assets/fc8c1853-55e8-4979-b7eb-c82f0db34b7a" />
+  <img src="neues-spiel/Assets/FirdtProject/Gameplay.png" alt="Gameplay" />
 </p>
 
 You play as a lone penguin who must collect fish in the frozen wilderness to feed its children.  
