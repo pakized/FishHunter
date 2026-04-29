@@ -2,7 +2,7 @@ extends CharacterBody2D
 @export var speed := 100
 @export var egg_scene: PackedScene
 @export var throw_interval := 1.0   # Sekunden
-
+@onready var sprite = $Sprite2D
 var direction := 1
 var throw_timer := 0.0
 
@@ -19,7 +19,7 @@ func handle_movement():
 		direction = -1
 	elif ray_left.is_colliding():
 		direction = 1
-
+	update_facing_direction()
 	velocity.x = direction * speed
 	
 	
@@ -39,3 +39,10 @@ func throw_egg():
 
 	egg.global_position = global_position + Vector2(0, 20)
 	egg.velocity = Vector2(0, 300)   # fällt nach unten
+	
+
+func update_facing_direction():
+	if direction > 0:
+		sprite.flip_h = true   # schaut nach rechts
+	else:
+		sprite.flip_h = false    # schaut nach links
