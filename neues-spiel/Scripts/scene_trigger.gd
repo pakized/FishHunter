@@ -12,6 +12,8 @@ var scenePaths: Array[String] = ["res://Scenes/Game.tscn", "res://Scenes/Levels/
 func _on_body_entered(body: Node2D) -> void:
 	#var fullPath = scene_folder + connected_scene + ".tscn"
 	if body is Player:
+		print(GameManager.score)
+		
 		if GameManager.score == 8:
 			match get_tree().current_scene.name:
 				"Game":
@@ -20,7 +22,7 @@ func _on_body_entered(body: Node2D) -> void:
 					scene_manager.change_scene(scenePaths[2], body)
 				"Level3":
 					scene_manager.change_scene(scenePaths[3], body)
-				"level4":
+				"level_4":
 					scene_manager.change_scene(scenePaths[4], body)
 				"level5":
 					scene_manager.change_scene(scenePaths[0], body)

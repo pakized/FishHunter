@@ -5,7 +5,7 @@ extends Node2D
 #
 func _ready():
 	GameManager.score = 0
-	#print(get_tree().current_scene.name)
+	print(get_tree().current_scene.name)
 
 	pass
 	#print($Player)

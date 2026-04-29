@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bobicrrniwwc4"]
+
+[ext_resource type="Script" uid="uid://d0irxq6uipi24" path="res://Scripts/PlatformLift.gd" id="1_2efvb"]
+[ext_resource type="Texture2D" uid="uid://b3b3w8ljsbxe0" path="res://Assets/FirdtProject/lvl4/Plarform.png" id="2_dcr7s"]
+[ext_resource type="Script" uid="uid://cfwpo1wnbe73m" path="res://Scripts/PlatformLiftScript.gd" id="3_yneum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w05a3"]
+size = Vector2(32, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lttcm"]
+size = Vector2(32, 8)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=1529566665]
+script = ExtResource("1_2efvb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1732760239]
+texture = ExtResource("2_dcr7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242264641]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_w05a3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=829497892]
+script = ExtResource("3_yneum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=58203314]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lttcm")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

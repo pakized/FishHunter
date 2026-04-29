@@ -9,6 +9,9 @@ var throw_timer := 0.0
 @onready var ray_left = $RayCastLeft
 @onready var ray_right = $RayCastRight
 
+#unc _ready() -> void:
+	#process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _physics_process(delta):
 	handle_movement()
 	handle_throwing(delta)
