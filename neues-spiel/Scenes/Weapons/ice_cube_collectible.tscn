@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dj4471h4e7k7l"]
+
+[ext_resource type="Script" uid="uid://cynkuhwomgaje" path="res://Scripts/Wapons/ice_cube_collectible.gd" id="1_epe0v"]
+[ext_resource type="Texture2D" uid="uid://bvfhupllytdp8" path="res://Assets/FirdtProject/lvl4/IceCube.png" id="1_j0ytk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0ytk"]
+size = Vector2(28, 30)
+
+[node name="ICeCubeCollectible" type="Area2D" unique_id=1895342070]
+collision_mask = 10
+script = ExtResource("1_epe0v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=858928849]
+texture = ExtResource("1_j0ytk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=758957205]
+shape = SubResource("RectangleShape2D_j0ytk")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

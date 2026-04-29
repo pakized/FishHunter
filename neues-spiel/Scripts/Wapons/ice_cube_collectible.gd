@@ -10,7 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_body_entered(body: Node2D) -> void:
-	GameManager.add_ammunition()
+	print("icubeCollected")
+	GameManager.get_ice()
 	queue_free()
+	pass # Replace with function body.

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0lnsbayhv3wo"]
+
+[ext_resource type="Texture2D" uid="uid://bvfhupllytdp8" path="res://Assets/FirdtProject/lvl4/IceCube.png" id="1_sph3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6o4x1"]
+size = Vector2(14, 14)
+
+[node name="iceCube" type="Area2D" unique_id=1045382923]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1160416977]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sph3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1625983009]
+shape = SubResource("RectangleShape2D_6o4x1")
