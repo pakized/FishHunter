@@ -70,7 +70,8 @@ func _on_l_1_pressed() -> void:
 		GameManager.player_name = name_input.text.strip_edges()
 	else:
 		GameManager.player_name = "Player"
-
+	Global.playerSelected = false
+	Global.levelSelection = 0
 	#get_tree().change_scene_to_file("res://Scenes/Levels/level5/level_5.tscn")
 	scene_manager.change_scene("res://Scenes/Game.tscn", null)
 
@@ -80,7 +81,8 @@ func _on_l_5_pressed() -> void:
 		GameManager.player_name = name_input.text.strip_edges()
 	else:
 		GameManager.player_name = "Player"
-
+	Global.playerSelected = false
+	Global.levelSelection = 0
 	get_tree().change_scene_to_file("res://Scenes/Levels/level5/level_5.tscn")
 	#scene_manager.change_scene("res://Scenes/Game.tscn", null)
 
@@ -90,7 +92,8 @@ func _on_l_2_pressed() -> void:
 		GameManager.player_name = name_input.text.strip_edges()
 	else:
 		GameManager.player_name = "Player"
-
+	Global.playerSelected = false
+	Global.levelSelection = 0
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level2/level_2.tscn")
 
 
@@ -99,7 +102,8 @@ func _on_l_4_pressed() -> void:
 		GameManager.player_name = name_input.text.strip_edges()
 	else:
 		GameManager.player_name = "Player"
-
+	Global.playerSelected = false
+	Global.levelSelection = 0
 	get_tree().change_scene_to_file("res://Scenes/Levels/level4/")
 
 
@@ -108,7 +112,8 @@ func _on_l_3_pressed() -> void:
 		GameManager.player_name = name_input.text.strip_edges()
 	else:
 		GameManager.player_name = "Player"
-
+	Global.playerSelected = false
+	Global.levelSelection = 0
 	get_tree().change_scene_to_file("res://Scenes/Levels/level3/")
 
 
@@ -117,6 +122,7 @@ func _on_l_6_pressed() -> void:
 		GameManager.player_name = name_input.text.strip_edges()
 	else:
 		GameManager.player_name = "Player"
-
+	Global.playerSelected = false
+	Global.levelSelection = 0
 	#get_tree().change_scene_to_file("res://Scenes/Levels/level5/level_5.tscn")
-	scene_manager.change_scene("res://Scenes/Game.tscn", null)
+	scene_manager.change_scene("res://Scenes/StartigView/Intro.tscn", null)

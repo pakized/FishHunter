@@ -13,7 +13,7 @@ config_version=5
 config/name="Neues Spiel"
 run/main_scene="uid://b785avodk4i3d"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://crr2bnvgamdnx"
 
 [audio]
 

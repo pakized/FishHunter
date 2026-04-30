@@ -4,7 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.score = 0
-	boss.connect("boss_defeated", _on_leo_seal_king_boss_defeated)
+#	boss.connect("boss_defeated", _on_leo_seal_king_boss_defeated)
 	GameManager.ammunition = 0
 	GameManager.reset_timer()
 	pass # Replace with function body.

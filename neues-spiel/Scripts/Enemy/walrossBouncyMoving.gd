@@ -1,32 +1,37 @@
 extends Node2D
-const SPEED = 20
-const JUMP = 45
-var direction = 1
+
+const SPEED := 20.0
+const JUMP := 45.0
+var direction := 1
+var start_y: float
 
 @onready var rayCastRight = $RayCastRight
 @onready var rayCastLeft = $RayCastLeft
 
-
 func _ready():
+	start_y = position.y
+	jump()
+
+func jump():
 	var duration := JUMP / SPEED
-	var tween = create_tween()
-	tween.set_loops()		#eventuell endlos schleife TODO: Infinite Loop error propably here
+	var tween := create_tween()
+
 	tween.tween_property(
 		self,
 		"position:y",
-		position.y - JUMP,
+		start_y - JUMP,
 		duration
-		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-		
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
 	tween.tween_property(
 		self,
 		"position:y",
-		position.y,
+		start_y,
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
-	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+	tween.finished.connect(jump) # ✅ kontrollierte Wiederholung
+
 func _process(delta: float) -> void:
 	if rayCastRight.is_colliding():
 		direction = -1
