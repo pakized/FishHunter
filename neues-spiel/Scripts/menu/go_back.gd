@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	Global.playerSelected = false
 	scene_manager.change_scene("res://Scenes/StartigView/startsite.tscn", null)
 	pass # Replace with function body.

@@ -191,5 +191,6 @@ script = ExtResource("7_dvpht")
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Highscore" to="Highscore" method="_on_pressed"]
+[connection signal="pressed" from="ChooseLevel" to="ChooseLevel" method="_on_pressed"]
 [connection signal="pressed" from="Credits" to="Credits" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
