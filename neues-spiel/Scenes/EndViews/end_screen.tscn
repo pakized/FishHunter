@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dedkwq8pqj3oy" path="res://Assets/FirdtProject/lvl4/Background-sheet.png" id="1_c6k2t"]
 [ext_resource type="Texture2D" uid="uid://bkphv112dl33v" path="res://Assets/FirdtProject/lvl4/Background2.png" id="2_ei6hy"]
+[ext_resource type="Script" uid="uid://c3m4o8yhejhes" path="res://Scripts/menu/go_back_to_menu.gd" id="3_twpl3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ei6hy"]
 texture = ExtResource("1_c6k2t")
@@ -76,3 +77,13 @@ thanks to you!
 
 Thank you for playing"
 horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=8066984]
+offset_left = 975.0
+offset_top = 596.0
+offset_right = 1268.0
+offset_bottom = 683.0
+text = "Go back to menu"
+script = ExtResource("3_twpl3")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

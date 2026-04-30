@@ -24,3 +24,8 @@ func format_time(seconds: float) -> String:
 	var minutes = int(seconds) / 60
 	var secs = int(seconds) % 60
 	return "%02d:%02d" % [minutes, secs]
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/EndViews/end_screen.tscn")
+	pass # Replace with function body.
