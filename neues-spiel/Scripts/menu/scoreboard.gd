@@ -17,7 +17,13 @@ func _ready() -> void:
 			]
 		text += "\n"
 	scores_label.text=text
-		
+	
+	if Global.startingPoint == 0:
+		$Next.visible = true
+		$GoBack.visible = false
+	if Global.startingPoint == 1:
+		$Next.visible = false
+		$GoBack.visible = true		
 
 		#var entry = GameManager.scoreboard[level]
 		#if not entry.has("name") or not entry.has("time"):
@@ -43,3 +49,7 @@ func format_time(seconds: float) -> String:
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/EndViews/end_screen.tscn")
 	pass # Replace with function body.
+
+
+func _on_go_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/StartigView/startsite.tscn")

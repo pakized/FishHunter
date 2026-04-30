@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dvthlu0qcff18"]
+
+[ext_resource type="PackedScene" uid="uid://d0dg8dle6opbu" path="res://Scenes/EndViews/Scoreboard.tscn" id="1_chfqs"]
+
+[node name="Node2D" type="Node2D" unique_id=146416557]
+
+[node name="Scoreboard" parent="." unique_id=974487792 instance=ExtResource("1_chfqs")]

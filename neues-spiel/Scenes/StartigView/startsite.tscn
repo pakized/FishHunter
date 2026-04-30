@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dbaf17mr11x8m" path="res://Scripts/menu/play.gd" id="6_67nmr"]
 [ext_resource type="Script" uid="uid://4m3l610ufotm" path="res://Scripts/menu/credits.gd" id="7_53phk"]
 [ext_resource type="Script" uid="uid://do054cg38syes" path="res://Scripts/menu/quitButton.gd" id="7_dvpht"]
+[ext_resource type="Script" uid="uid://drjskkenjmako" path="res://Scripts/menu/highscore.gd" id="7_ks7xf"]
 [ext_resource type="Script" uid="uid://cxfunjusvu2rq" path="res://Scripts/menu/choose_level.gd" id="7_o7uu1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ks7xf"]
@@ -158,6 +159,7 @@ offset_top = 175.0
 offset_right = 336.0
 offset_bottom = 266.0
 text = "Highscore"
+script = ExtResource("7_ks7xf")
 
 [node name="ChooseLevel" type="Button" parent="." unique_id=343310250]
 layout_mode = 0
@@ -188,5 +190,6 @@ text = "Quit"
 script = ExtResource("7_dvpht")
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Highscore" to="Highscore" method="_on_pressed"]
 [connection signal="pressed" from="Credits" to="Credits" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func _on_leo_seal_king_boss_defeated() -> void:
 	GameManager.save_time("Boss")
 	#get_tree().change_scene_to_file("res://Scenes/EndViews/end_screen.tscn")
-
+	Global.startingPoint = 0
 	get_tree().call_deferred(
    	"change_scene_to_file",
 	"res://Scenes/EndViews/Scoreboard.tscn"

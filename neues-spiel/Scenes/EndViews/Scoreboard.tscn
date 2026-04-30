@@ -83,9 +83,18 @@ tile_set = SubResource("TileSet_gx3oc")
 [node name="Next" type="Button" parent="." unique_id=492198754]
 layout_mode = 0
 offset_left = 973.0
-offset_top = 592.0
+offset_top = 591.0
 offset_right = 1269.0
-offset_bottom = 682.0
+offset_bottom = 681.0
 text = "Next"
 
+[node name="GoBack" type="Button" parent="." unique_id=1405619928]
+layout_mode = 0
+offset_left = 974.0
+offset_top = 590.0
+offset_right = 1270.0
+offset_bottom = 680.0
+text = "Go back"
+
 [connection signal="pressed" from="Next" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GoBack" to="." method="_on_go_back_pressed"]
