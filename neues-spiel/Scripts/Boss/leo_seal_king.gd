@@ -10,7 +10,7 @@ var jump_tween: Tween
 @onready var rayCastLeft = $RayCastLeft
 
 
-
+signal boss_defeated
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,3 +43,12 @@ func _ready():
 		position.y,
 		duration
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+
+
+
+
+func die():
+	emit_signal("boss_defeated")
+	queue_free()
+
+	

@@ -223,3 +223,5 @@ position = Vector2(326, 482)
 
 [node name="BouncingSeal" parent="Enemies" unique_id=119448049 instance=ExtResource("10_cybid")]
 position = Vector2(386, 113)
+
+[connection signal="boss_defeated" from="Enemies/LeoSealKing" to="." method="_on_leo_seal_king_boss_defeated"]
