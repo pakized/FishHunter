@@ -224,4 +224,18 @@ position = Vector2(326, 482)
 [node name="BouncingSeal" parent="Enemies" unique_id=119448049 instance=ExtResource("10_cybid")]
 position = Vector2(386, 113)
 
+[node name="Label" type="Label" parent="." unique_id=230879415]
+offset_left = 46.0
+offset_top = 331.0
+offset_right = 244.0
+offset_bottom = 447.0
+theme_override_font_sizes/font_size = 10
+text = "there is a big one normal sized snowballs
+will not work here 
+try collect as many as you can to form a 
+giant snowball 
+use the scroll wheel to throw it 
+
+"
+
 [connection signal="boss_defeated" from="Enemies/LeoSealKing" to="." method="_on_leo_seal_king_boss_defeated"]
