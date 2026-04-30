@@ -67,7 +67,7 @@ To defeat it, the player must:
 - **Shoot snowball:** Left mouse button  
   *(only available if snowballs have been collected)*
 - **Ice Cube:** Right mouse button
-  *(only available if snowballs have been collected)*
+  *(only available if ice cube has been collected)*
 - **Giant Snowball:** Mouse wheel *(after collecting 6 snowballs)*
 
 
