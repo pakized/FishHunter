@@ -8,7 +8,6 @@ var maxFish = 8
 
 func _ready():
 	GameManager.reset_timer()
-	GameManager.reset_timer()
 
 	pass
 	

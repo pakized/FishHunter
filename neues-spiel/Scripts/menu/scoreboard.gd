@@ -5,16 +5,30 @@ extends Control
 func _ready() -> void:
 	var text := ""
 	for level in GameManager.scoreboard.keys():
-		var entry = GameManager.scoreboard[level]
-		if not entry.has("name") or not entry.has("time"):
-			push_warning("Ungültiger Scoreboard-Eintrag: %s -> %s" % [level, entry])
-			continue
-		text += "%s – %s – %s\n" % [
-			level,
-			entry["name"],
-			format_time(entry["time"])
-		]
-	scores_label.text = text
+		text += "=== %s ===\n" % level
+		var entries: Array = GameManager.scoreboard[level]
+		
+		for i in range(entries.size()):
+			var entry = entries[i]
+			text += "%d. %s -%s\n"%[
+				i+1,
+				entry["name"],
+				format_time(entry["time"])
+			]
+		text += "\n"
+	scores_label.text=text
+		
+
+		#var entry = GameManager.scoreboard[level]
+		#if not entry.has("name") or not entry.has("time"):
+			#push_warning("Ungültiger Scoreboard-Eintrag: %s -> %s" % [level, entry])
+			#continue
+		#text += "%s – %s – %s\n" % [
+			#level,
+			#entry["name"],
+			#format_time(entry["time"])
+		#]
+	#scores_label.text = text
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

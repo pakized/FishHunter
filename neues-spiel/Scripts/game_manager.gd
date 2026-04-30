@@ -20,9 +20,25 @@ func update_timer(delta):
 	current_level_time += delta
 
 func save_time(level_name: String):
-	scoreboard [level_name] = {
+	if not scoreboard.has(level_name):
+		scoreboard[level_name] = []
+	var level_scores: Array = scoreboard[level_name]
+	
+	level_scores.append({
 		"name" : player_name,
-		"time" : current_level_time}
+		"time" : current_level_time
+		})
+		
+	#sort time
+	level_scores.sort_custom(func(a, b):
+		return a["time"] < b["time"]	
+	)
+	
+	# only top 3
+	if level_scores.size()>3:
+		level_scores.resize(3)
+		
+	scoreboard[level_name] = level_scores
 	save_to_file()
 
 func save_to_file():
