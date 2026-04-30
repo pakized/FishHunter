@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://mkpdfk6npw0a"]
+
+[ext_resource type="Script" uid="uid://dfj40oiy6k6no" path="res://Scripts/Enemy/bouncy_moving_seal.gd" id="1_dhpch"]
+[ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="2_7xeu8"]
+
+[node name="BouncyMovingSeal" type="Node2D" unique_id=2005181394]
+script = ExtResource("1_dhpch")
+
+[node name="Walross" parent="." unique_id=21398026 instance=ExtResource("2_7xeu8")]

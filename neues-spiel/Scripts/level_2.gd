@@ -6,7 +6,7 @@ extends Node2D
 func _ready():
 	GameManager.score = 0
 	print(get_tree().current_scene.name)
-
+	GameManager.reset_timer()
 	pass
 	#print($Player)
 #	PlayerCharakter.set_spawn_position(Vector2(0, -10))
@@ -25,5 +25,6 @@ func _ready():
 #
 #
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
+func _process(delta: float) -> void:
+	GameManager.update_timer(delta)
 	#pass

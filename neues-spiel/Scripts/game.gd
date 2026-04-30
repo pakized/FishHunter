@@ -7,11 +7,13 @@ extends BaseScene
 var maxFish = 8
 
 func _ready():
-	
-	
+	GameManager.reset_timer()
+	GameManager.reset_timer()
+
 	pass
 	
 func _process(delta: float) -> void:
+	GameManager.update_timer(delta)
 	if GameManager.score < maxFish: 
 		score_label.text = "you only got " + str(GameManager.score) 
 	else:

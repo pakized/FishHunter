@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	scene_manager.change_scene("res://Scenes/StartigView/Intro.tscn", null)
+	#scene_manager.change_scene("res://Scenes/StartigView/Intro.tscn", null)
+	scene_manager.change_scene("res://Scenes/StartigView/ScoreboardSave.tscn", null)
 	pass # Replace with function body.

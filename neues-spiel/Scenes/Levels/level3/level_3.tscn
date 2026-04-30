@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://d022efm1wh6wr" path="res://Scripts/lvl3/level_3.gd" id="1_qaq1b"]
 [ext_resource type="PackedScene" uid="uid://boncxbjhfylr8" path="res://Scenes/player.tscn" id="2_th080"]
 [ext_resource type="Texture2D" uid="uid://clrig3mpea1hg" path="res://Assets/FirdtProject/lvl3/Background.png" id="3_d3q4f"]
-[ext_resource type="PackedScene" uid="uid://o7tlfrhp2233" path="res://Scenes/Weapons/Snowball.tscn" id="3_sl37e"]
 [ext_resource type="Texture2D" uid="uid://cru2by1n0da6f" path="res://Assets/FirdtProject/lvl3/Background2.png" id="4_kd8jy"]
 [ext_resource type="Texture2D" uid="uid://0ku32lbeqkiv" path="res://Assets/FirdtProject/lvl3/Tiles.png" id="5_qxnb4"]
 [ext_resource type="PackedScene" uid="uid://dg5dylob8pl7f" path="res://Scenes/Weapons/SnowballCollectable.tscn" id="6_qxnb4"]
@@ -226,7 +225,6 @@ script = ExtResource("1_qaq1b")
 
 [node name="Player" parent="." unique_id=2069080751 instance=ExtResource("2_th080")]
 position = Vector2(1, -23)
-snowball_scene = ExtResource("3_sl37e")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=744276307]
 position = Vector2(-1, 23)
