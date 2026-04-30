@@ -40,6 +40,7 @@ In addition to standard snowballs, the player can use **two additional ice-based
 
 ### 🧊 Ice Cube
 - Activated with **right mouse button**
+- Limited amount
 - Freezes **flying enemies**, preventing them from attacking
 
 ### ❄️ Giant Snowball
