@@ -6,15 +6,15 @@ func _ready() -> void:
 	var text := ""
 	for level in GameManager.scoreboard.keys():
 		var entry = GameManager.scoreboard[level]
+		if not entry.has("name") or not entry.has("time"):
+			push_warning("Ungültiger Scoreboard-Eintrag: %s -> %s" % [level, entry])
+			continue
 		text += "%s – %s – %s\n" % [
 			level,
 			entry["name"],
 			format_time(entry["time"])
-			]
-		scores_label.text = text
-
-
-
+		]
+	scores_label.text = text
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

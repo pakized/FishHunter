@@ -19,4 +19,4 @@ func _on_button_pressed():
 		GameManager.player_name = "Player"
 
 	#get_tree().change_scene_to_file("res://Scenes/Levels/level5/level_5.tscn")
-	scene_manager.change_scene("res://Scenes/StartigView/Intro.tscn", null)
+	scene_manager.change_scene("res://Scenes/Game.tscn", null)
