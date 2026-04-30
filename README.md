@@ -67,10 +67,11 @@ To defeat it, the player must:
 - **Shoot snowball:** Left mouse button  
   *(only available if snowballs have been collected)*
 - **Ice Cube:** Right mouse button
+  *(only available if snowballs have been collected)*
 - **Giant Snowball:** Mouse wheel *(after collecting 6 snowballs)*
 
 
 
 ## Objective
 - Complete all **5 levels**
-- Collect all fish
+- Collect all fish in each level
