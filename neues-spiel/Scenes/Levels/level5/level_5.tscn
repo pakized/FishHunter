@@ -125,18 +125,6 @@ position = Vector2(164, 418)
 position = Vector2(33, -3)
 zoom = Vector2(4, 4)
 
-[node name="LeoSealKing" parent="." unique_id=1871251231 instance=ExtResource("5_mh1w4")]
-top_level = true
-position = Vector2(326, 482)
-
-[node name="SeaGull" parent="." unique_id=1945042883 instance=ExtResource("6_ddj8c")]
-z_index = 1
-position = Vector2(247, 460)
-
-[node name="SeaGull2" parent="." unique_id=674485815 instance=ExtResource("6_ddj8c")]
-z_index = 1
-position = Vector2(754, 428)
-
 [node name="Snowball5" parent="." unique_id=734857738 instance=ExtResource("8_wgsu3")]
 position = Vector2(415, 229)
 
@@ -190,9 +178,6 @@ position = Vector2(982, 400)
 [node name="ICeCubeCollectible" parent="." unique_id=1895342070 instance=ExtResource("9_qqet4")]
 position = Vector2(147, 174)
 
-[node name="BouncingSeal" parent="." unique_id=119448049 instance=ExtResource("10_cybid")]
-position = Vector2(386, 113)
-
 [node name="Snowballs" type="Node" parent="." unique_id=906607714]
 
 [node name="Snowball" parent="Snowballs" unique_id=160528281 instance=ExtResource("8_wgsu3")]
@@ -221,3 +206,20 @@ position = Vector2(353, 511)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1712387978]
 position = Vector2(-14, 85)
 shape = SubResource("WorldBoundaryShape2D_n0yjo")
+
+[node name="Enemies" type="Node" parent="." unique_id=540390097]
+
+[node name="SeaGull" parent="Enemies" unique_id=1945042883 instance=ExtResource("6_ddj8c")]
+z_index = 1
+position = Vector2(247, 460)
+
+[node name="SeaGull2" parent="Enemies" unique_id=674485815 instance=ExtResource("6_ddj8c")]
+z_index = 1
+position = Vector2(754, 428)
+
+[node name="LeoSealKing" parent="Enemies" unique_id=1871251231 instance=ExtResource("5_mh1w4")]
+top_level = true
+position = Vector2(326, 482)
+
+[node name="BouncingSeal" parent="Enemies" unique_id=119448049 instance=ExtResource("10_cybid")]
+position = Vector2(386, 113)

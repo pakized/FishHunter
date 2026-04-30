@@ -1,9 +1,11 @@
 extends Area2D
 
+var is_giant := false
+
 
 
 func _ready():
-	process_mode = Node.PROCESS_MODE_ALWAYS
+#	process_mode = Node.PROCESS_MODE_ALWAYS
 	pass	
 	
 
@@ -30,4 +32,8 @@ func _on_area_entered(area: Area2D) -> void:
 		print("test")
 		area.get_parent().queue_free()
 		queue_free()
-	pass # Replace with function body.	pass # Replace with function body.
+	if area.is_in_group("Enemy") and is_giant:
+		print("test")
+		area.get_parent().queue_free()
+		queue_free()
+pass # Replace with function body.	pass # Replace with function body.

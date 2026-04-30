@@ -64,6 +64,10 @@ func _unhandled_input(event):
 		if event.button_index == MOUSE_BUTTON_MASK_RIGHT\
 		and event.pressed:
 			use_iceCubes()
+		if event.button_index == MOUSE_BUTTON_MASK_MIDDLE\
+		and event.pressed:
+			use_GiantSnowball()
+			print("Mitte")
 	
 	
 func throw_snowball():
@@ -103,3 +107,17 @@ func use_iceCubes():
 		print("no ice")
 		
 #euhf
+func use_GiantSnowball():
+	if GameManager.ammunition >= 6:
+		var giantSnowball = snowball_scene.instantiate()
+		giantSnowball.scale = Vector2(2,2)
+		giantSnowball.is_giant = true
+		get_parent().add_child(giantSnowball)
+		giantSnowball.global_position = global_position + Vector2(0,0)
+		
+		var mouse_pos = get_global_mouse_position()
+		var direction = (mouse_pos - giantSnowball.global_position).normalized()
+		giantSnowball.velocity = direction * 150
+		GameManager.ammunition -=6
+	print("success")
+	throw_snowball()
