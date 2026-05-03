@@ -104,7 +104,7 @@ func _on_l_4_pressed() -> void:
 		GameManager.player_name = "Player"
 	Global.playerSelected = false
 	Global.levelSelection = 0
-	get_tree().change_scene_to_file("res://Scenes/Levels/level4/")
+	get_tree().change_scene_to_file("res://Scenes/Levels/level4/level_4.tscn")
 
 
 func _on_l_3_pressed() -> void:
@@ -114,7 +114,7 @@ func _on_l_3_pressed() -> void:
 		GameManager.player_name = "Player"
 	Global.playerSelected = false
 	Global.levelSelection = 0
-	get_tree().change_scene_to_file("res://Scenes/Levels/level3/")
+	get_tree().change_scene_to_file("res://Scenes/Levels/level3/level_3.tscn")
 
 
 func _on_l_6_pressed() -> void:
