@@ -376,5 +376,8 @@ down if you have all your fishes"
 [node name="SeaGull2" parent="." unique_id=737685896 instance=ExtResource("13_6wn14")]
 position = Vector2(858, 524)
 
+[node name="Platform" parent="." unique_id=2132041791 instance=ExtResource("4_mmgyo")]
+position = Vector2(1192, 419)
+
 [connection signal="body_entered" from="Platforms/Platform3/Detector" to="Platforms/Platform3/Detector" method="_on_body_entered"]
 [connection signal="body_exited" from="Platforms/Platform3/Detector" to="Platforms/Platform3/Detector" method="_on_body_exited"]

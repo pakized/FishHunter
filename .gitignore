@@ -1,1 +1,15 @@
+# Godot export files
 *.exe
+*.zip
+*.pck
+*.wasm
+*.js
+*.html
+
+# Export folders
+/build/
+export/
+
+# OS files
+.DS_Store
+Thumbs.db

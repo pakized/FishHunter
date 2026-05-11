@@ -4,6 +4,8 @@ extends Node2D
 #
 #
 func _ready():
+	print(get_tree().current_scene.name)
+	print("Scene name:", get_tree().current_scene.name)
 	GameManager.score = 0
 	GameManager.reset_timer()
 	pass

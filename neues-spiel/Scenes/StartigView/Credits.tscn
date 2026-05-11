@@ -81,8 +81,7 @@ Godot Documentation
 YouTube Tutorials (see README)
 
 Project:
-University Project
-Non-commercial use"
+University Project"
 
 [node name="GoBack" type="Button" parent="." unique_id=386910162]
 offset_left = 967.0
