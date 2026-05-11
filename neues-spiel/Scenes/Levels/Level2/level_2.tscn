@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="10_j1k8d"]
 [ext_resource type="Script" uid="uid://dxofglyn844sw" path="res://Scripts/Enemy/walrossBouncyMoving.gd" id="13_b6hw4"]
 [ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Scenes/Levels/scene_trigger.tscn" id="14_q84mq"]
+[ext_resource type="PackedScene" uid="uid://c74dgqq3ugjf1" path="res://Scenes/Levels/ScoreShower.tscn" id="15_oivyd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arsda"]
 texture = ExtResource("2_kbe2v")
@@ -324,3 +325,5 @@ connected_scene = "level_2"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=638359991]
 position = Vector2(8, 1)
 shape = SubResource("CapsuleShape2D_oivyd")
+
+[node name="CanvasLayer" parent="." unique_id=230670040 instance=ExtResource("15_oivyd")]

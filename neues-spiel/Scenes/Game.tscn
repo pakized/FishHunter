@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bwlxafxqixypu" path="res://Scenes/Enemies/walross.tscn" id="10_71axn"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="12_3so38"]
 [ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Scenes/Levels/scene_trigger.tscn" id="13_3cx6b"]
+[ext_resource type="PackedScene" uid="uid://c74dgqq3ugjf1" path="res://Scenes/Levels/ScoreShower.tscn" id="14_wxwew"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u44n3"]
 texture = ExtResource("2_fgofq")
@@ -274,3 +275,22 @@ connected_scene = "level_2"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=1521409218]
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_wxwew")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=909934871]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=547973280]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1413068792]
+layout_direction = 2
+layout_mode = 1
+offset_right = 125.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 20
+text = "Fish:"
+
+[node name="CanvasLayer2" parent="." unique_id=230670040 instance=ExtResource("14_wxwew")]

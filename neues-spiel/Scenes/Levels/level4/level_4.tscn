@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://wil4xdtljrto" path="res://Assets/FirdtProject/lvl4/Tiles.png" id="3_7kw70"]
 [ext_resource type="PackedScene" uid="uid://cjsu5gahc748" path="res://Scenes/Levels/level4/platform.tscn" id="4_mmgyo"]
 [ext_resource type="PackedScene" uid="uid://bbia1b1kppqu7" path="res://Scenes/Fish.tscn" id="5_6meei"]
+[ext_resource type="PackedScene" uid="uid://c74dgqq3ugjf1" path="res://Scenes/Levels/ScoreShower.tscn" id="6_3058r"]
 [ext_resource type="PackedScene" uid="uid://dg5dylob8pl7f" path="res://Scenes/Weapons/SnowballCollectable.tscn" id="7_hwi50"]
 [ext_resource type="Script" uid="uid://b10u0ilbnc7u7" path="res://Scenes/Levels/level4/DetectingAndMovingPlatform.gd" id="8_dgus7"]
 [ext_resource type="Script" uid="uid://im4f4wkiar2b" path="res://Scenes/Levels/level4/PlatformDetector.gd" id="9_81a5i"]
@@ -244,6 +245,8 @@ tile_set = SubResource("TileSet_mmgyo")
 
 [node name="Platform" parent="TileMap" unique_id=51484772 instance=ExtResource("4_mmgyo")]
 position = Vector2(1215, -7)
+
+[node name="CanvasLayer" parent="TileMap" unique_id=230670040 instance=ExtResource("6_3058r")]
 
 [node name="Player" parent="." unique_id=2069080751 groups=["Player"] instance=ExtResource("2_pun3u")]
 position = Vector2(34, -17)

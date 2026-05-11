@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://c66ec4i4ncmph" path="res://Scenes/Levels/level3/walrossmovingHorizontal.gd" id="12_l2mfs"]
 [ext_resource type="PackedScene" uid="uid://bk7wnw4olvkwb" path="res://Scenes/home.tscn" id="13_02qms"]
 [ext_resource type="Script" uid="uid://ntkgmwx27ssc" path="res://Scenes/Levels/level3/walrossmovingVertical.gd" id="13_otjro"]
+[ext_resource type="PackedScene" uid="uid://c74dgqq3ugjf1" path="res://Scenes/Levels/ScoreShower.tscn" id="15_ae5bq"]
 [ext_resource type="PackedScene" uid="uid://bk4e1i1g0elkh" path="res://Scenes/Levels/scene_trigger.tscn" id="15_ph5ud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3nqj"]
@@ -356,3 +357,5 @@ position = Vector2(1809, 99)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger" unique_id=1865293961]
 position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_e8jce")
+
+[node name="CanvasLayer" parent="." unique_id=230670040 instance=ExtResource("15_ae5bq")]

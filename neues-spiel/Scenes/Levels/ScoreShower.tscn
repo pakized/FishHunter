@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c74dgqq3ugjf1"]
+
+[ext_resource type="Script" uid="uid://dq0icf6qywrv4" path="res://Scripts/Game/FishCountShowLabel.gd" id="1_mguaw"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=230670040]
+
+[node name="Control" type="Control" parent="." unique_id=649677932]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=246849091]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_mguaw")
