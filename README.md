@@ -1,5 +1,8 @@
 # 🐟 FishHunter
 
+🎮 Play the game here:  
+https://pakize.itch.io/fish-hunter
+
 ## Description
 FishHunter is a simple 2D jump-and-run game developed with **Godot**.
 
